@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background: lightblue}
+        .bigpic{width:980px;height:500px;}
+        .center{position:absolute;margin:auto;left:0;top:0;bottom:0;right:0;}
+        .item{width:196px;height:100px;position: absolute;background: #fff;transition: transform 2s,padding 2s ease-in-out 2s;}
+        .pic{width:100%;height:100%;transition: transform 2s ease-in-out 2s;}
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            init();
+            showAll();
+        });
+        function init(){
+            var state=true;
+            for(var i=0;i<25;i++){
+                var x=i%5*196;
+                var y=parseInt(i/5)*100;
+                $("<div class='item'><div class='pic'></div></div>")
+                .css({left:x+"px",top:y+"px"}).appendTo(".bigpic")
+                .click(function(){
+                    state ?  showOne( $(this).index() ) : showAll();
+                    state=!state;
+                });
+            };
+        };
+        function showAll(){
+            $(".item").css({padding:"5px"}).each(function(i){
+                var deg=Math.random()*60-30;
+                var x=i%5;
+                var y=parseInt(i/5);
+                $(this).css({transform:"translate("+(x-2)*70+"px,"+(y-2)*70+"px) rotate("+deg+"deg)"});
+                        // 先旋转个位移是不同效果 有顺序区别 rotate translate
+            }).find(".pic").each(function(i){
+                $(this).css({ backgroundImage:"url(images/"+i+".jpg)",backgroundSize:"cover",transform:"scale(0.98,0.96)"});
+
+            })
+        };
+        function showOne(j){
+            $(".item").css({transform:"translate( 0,0)" +"rotate(0deg)",padding:"1px"})
+            .find(".pic").each(function(i){
+                var x=i%5;
+                var y=parseInt(i/5);
+                $(this).css({backgroundImage:"url(images/"+j+".jpg)",backgroundSize:"auto",backgroundPosition:x*25+"%"+y*25+"%",transform:"scale(1,1)"});
+            })
+        };
+
+    </script>
+
+</head>
+<body>
+
+<div class="bigpic center">
+
+</div>
+
+</body>
+</html>

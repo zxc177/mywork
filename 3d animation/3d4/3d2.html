@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        .banner{width:1000px;height:409px;position:relative;transform-style: preserve-3d;perspective:2000px;}
+        .center{position:absolute;margin:auto;left:0;top:0;right:0;bottom:0;}
+        .banner li{width:1000px;height:409px;float:left;list-style: none;}
+        .item{position:absolute;}
+
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            var $bigpic=$(".bigpic");
+            $bigpic.each(function(i){//面的索引
+                var cols=10;//列
+                var w=$bigpic.width()/cols;//宽度
+                var h=$bigpic.height();//高度
+                for(var c=0;c<cols;c++){//列
+                    $("<div class='item'></div>").css({
+                        backgroundImage:"url(images2/"+i+".jpg)",
+                        backgroundPosition:c*100/(cols-1)+"% 0%",
+                        width:w,height:h,
+                        left:c*w,top:0,
+                        transform:"rotateY("+(-90*i)+"deg) translateZ(200px)",
+                        transition:"transform 1s linear "+0.02*c+"s"
+                    }).appendTo ( $(this) );
+                };
+            });
+            var cout=0;
+            $("body").click(function(){
+                cout++;
+                $bigpic.each(function(i) {
+                    $(this).find(".item").css({
+                                transform: "rotateY("+(-90*(i+cout))+ "deg) translateZ(200px)"
+                            })
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <ul class="banner center">
+        <li  class="bigpic">
+
+        </li>
+        <li  class="bigpic">
+
+        </li>
+        <li  class="bigpic">
+
+        </li>
+        <li  class="bigpic">
+
+        </li>
+    </ul>
+
+</body>
+</html>

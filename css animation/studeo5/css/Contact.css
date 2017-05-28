@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{text-align:center;}
+.main h2{font-size:30px;color:#010101;line-height:98px;height:98px;padding-top:56px;}
+.main  p{font-size:13px;color:#adadad;line-height:22px;padding:0 168px 33px 104px;height:66px;}
+.main  .text{width:333px;height:47px;padding:0 17px;border-radius:4px;font-size:15px;line-height:47px;background:#ededed;color:#a8a8a8;border:1px solid #dcdbe0;}
+
+.main .textarea{color:#a8a8a8;width:1081px;height:248px;padding:0 17px;line-height:47px;font-size:15px;background:#ededed;margin-top:24px;border:1px solid #dcdbe0;}
+
+.main  .submit{background:#ed5844;font-size:18px;margin:44px 0;cursor:pointer;width:225px;height:57px;line-height:57px;color:#fff;}
+
+
+
+
+
+
+
+

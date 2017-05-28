@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,input{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+img,input{border:none;}
+i{font-style:normal;}
+body{font-family:"微软雅黑","宋体";}
+.clear:after{content:"200B";line-height:0;font-size:0;display:block;clear:both;}
+.clear{*zoom:1;}
+.hide{display: none;}
+.inner{width:1210px;margin:0 auto;}
+.top{background:#f1f1f1;height:30px;}
+.top .map{line-height:30px;float:left;font-size:12px;font-family:"宋体";color:#666;padding:0 10px;}
+.top .map:hover{background:#fff;}
+.top .map:hover i{line-height:13px;}
+.top ul{float:right;}
+.top ul li{float:left;}
+.top ul li a{display:inline-block;line-height:30px;font-size:12px;font-family:"宋体";color:#666;padding:0 10px;}
+.top ul .line{width:1px;height:12px;background:#ddd;margin-top:9px;}
+.top ul li a i,.top .map i{width:11px;height:6px;display:inline-block;font-size:10px;font-family:consolas;line-height:1px;overflow:hidden;padding-left:10px;}
+.top ul li a span{width:11px;height:16px;background:url(../images/jd2015img.png) no-repeat -2px -2px;float:left;margin:7px 5px 0 0;}
+.top ul li a:hover{color:#cd303c;background:#fff;}
+.top ul li .active{color:#cd303c;}
+.top ul li a:hover i{line-height:13px;}
+.top ul li a:hover span{background-position:-2px -27px;}
+.header{border-bottom:2px solid #b1191a;}
+.header .logo{float:left;width:270px;height:60px;padding-top:20px;}
+.header .search{float:left;padding:25px 0 0 92px;}
+.header .search .text{width:454px;height:32px;border:2px solid #b61d1d;float:left;font-size:14px;color:#666;line-height:32px;padding:0 4px;}
+.header .search .sub{width:80px;height:36px;background:#b61d1d;font-size:15px;color:#fff;line-height:36px;text-align:center;cursor:pointer;}
+.header .search .hot a{line-height:27px;margin-right:10px;font-size:12px;color:#666;float:left;}
+.header .search .hot a:hover,.header .search .hot .first{color:#cd303c;}
+.header .buy{float:right;margin:25px 65px;width:139px;height:34px;border:1px solid #dfdfdf;background:#f9f9f9 url(../images/jd2015img.png) no-repeat 18px -49px;position:relative;}
+.header .buy i{float:right;padding-right:12px;font:15px/34px "consolas";color:#bebebe;}
+.header .buy a{font:12px/34px "宋体";color:#858585;padding-left:43px;}
+.header .buy .pop{position:absolute;height:14px;border-radius:5px 5px 5px 0;background:#c81623;font:12px/14px "arial";color:#fff;padding:0 6px;top:-3px;left:105px;}
+.header .header_b{padding-top:12px;}
+.header .header_b .allkind{color:#fff;font:15px/44px "微软雅黑";width:200px;height:44px;padding-left:10px;background:#b1191a;float:left;}
+.header .header_b ul{float:left;}
+.header .header_b li{float:left;padding:0 20px;}
+.header .header_b li a{font:16px/44px "微软雅黑";color:#333;}
+.header .header_b li a:hover{color:#cd303c;}
+.sider1{width:6px;height:100%;position:fixed;right:0;top:0;background:#7a6e6e;z-index:1;}
+.sider2{position:fixed;right:6px;top:40%;}
+.sider2 li,.sider3 li{width:29px;height:35px;margin-top:1px;border-radius:3px 0 0 3px;background:#7a6e6e url(../images/sider.png) no-repeat -89px -173px;}
+.sider2 li a,.sider3 li a{display:block;width:29px;height:35px;color:#fff;font:12px/15px "宋体";position:relative;}
+.sider2 .er{background-position:-49px 0;}
+.sider2 .san{background-position:-50px -51px;}
+.sider2 .si{background-position:-50px -99px;}
+.sider2 .wu{background-position:-190px -151px;}
+.sider2 .liu{background-position:-49px -149px;}
+.sider2 .yi a:before{content:"";width:4px;height:4px;position:absolute;top:9px;left:20px;background:url(../images/sider.png) no-repeat -151px -151px;z-index:2;}
+.sider2 .yi a:hover:before{display:none;}
+.sider3{position:fixed;right:6px;bottom:0;}
+.sider3 .yi{background-position:-50px -252px;}
+.sider3 .er{background-position:-50px -302px;}
+.sider3 .san a{background:#c81623;padding:2px 5px;}
+.sider2 .son,.sider3 .son{height:35px;word-break:keep-all;padding:0 7px;border-radius:4px 0 0 4px;color:#fff;font:12px/35px "宋体";position:absolute;right:-40px;top:0;background:#7a6e6e;z-index:-1;transition:all 0.5s;}
+.sider2 li:hover,.sider3 li:hover{border-radius:0px;background-color:#c81623;}
+.sider2 li:hover a .son,.sider3 li:hover a .son{right:28px;background:#c81623;}

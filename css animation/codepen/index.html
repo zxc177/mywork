@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6,ul,li,dl,dd,p,input,textarea{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+img,input{border:none;}
+header,nav,section,article,footer,video,audio{display:block;}
+.inner{width:1000px;margin:0 auto;}
+.clear{clear:both;}
+
+
+@font-face {
+	font-family: 'Conv_Munro';
+	src: url('fonts/Munro.eot');
+	src: local('☺'), url('fonts/Munro.woff') format('woff'), url('fonts/Munro.ttf') format('truetype'), url('fonts/Munro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+header .logo{padding-right:20px;font-size:36px;line-height:110px;color:#4489a8;text-transform:uppercase;float:left;}
+header .logo a{padding-right:20px;color:#4489a8;}
+header nav{float:right;color:#030002;font-size:12px;line-height:110px;}
+header{background-color:#e5e5e5;height:110px;}
+
+.one{background-color:#4c90a5;text-align:center;padding:100px 0;background-image:-moz-linear-gradient(right,#466bbc,#4b8ea8 10%,#85bc79);}
+
+.one h2{font-size:36px;color:#fffeff;line-height:59px;font-family: 'Conv_Munro';}
+.one p{font-size:18px;color:#fffeff;line-height:40px;}
+.one h2 a{border-bottom:1px dotted #fffeff;color:#fffeff;position:relative;}
+
+.one h2 a:before{content:"";width:100%;height:1px;border-top:1px dotted #fffeff;position:absolute;left:0;top:100%;transition:all 1s;}
+.one h2 a:hover:before{opacity:0.9;top:0;}
+
+.one .button a{border:1px solid #fffeff;border-radius:4px;width:175px;height:50px;font-size:18px;color:#fffeff;line-height:50px;margin:0 auto;margin-top:48px;display:block;color:#fffeff;position:relative;transition:all 1s;}
+.one .button a:hover{padding:0 100px;color:#fff;background-color:#90c320;border-radius:50%;}
+
+.one .button a:before{content:"";width:1px;height:100px;background-color:#fff;position:absolute;left:50%;top:51px;}
+
+@keyframes donghua{0%{text-shadow:0 0 0 yellow;}50%{text-shadow:0 0 10px yellow,0 0 10px yellow;transform:scale(1.5);font-size:50px;}100%{text-shadow:0 0 0 yellow;}}
+
+.one i{font-size:70px;color:#DDBFFF;animation:donghua 3s ease 1s infinite alternate;transition:all 0.5s;animation-fill-mode:forwards;}
+.two article{float:left;width:500px;}
+.two ul{width:500px;float:left;}
+.two ul li{float:left;border:1px solid #7daabd;text-align:center;width:140px;margin:40px;font-size:70px;line-height:140px;transform:rotate(45deg);overflow:hidden;}
+
+.two ul li a{font-size:70px;display:inline-block;width:140px;height:140px;transform:rotate(-45deg); vertical-align:middle;transition:all 0.5s;}
+
+.two ul li:nth-child(1) a{color:#c4eb9c;}
+.two ul li:nth-child(2) a{color:#8adda9;}
+.two ul li:nth-child(3) a{color:#6bd3c8;}
+.two ul li:nth-child(4) a{color:#58add2;}
+.two ul li:nth-child(5) a{color:#4a88d3;}
+.two ul li:nth-child(6) a{color:#6b88e6;}
+
+.two ul li:nth-child(1):hover a{transform:rotate(-45deg) scale(1.5);}
+.two ul li:nth-child(2):hover a{transform:rotate(315deg);}
+.two ul li:nth-child(3):hover a{transform:rotate(-45deg) skew(45deg);}
+.two ul li:nth-child(4):hover a{transform:rotate(180deg) scale(1.5);}
+.two ul li:nth-child(5):hover a{transform:rotate(-45deg) scale(0.8);}
+.two ul li:nth-child(6):hover a{transform:rotate(-45deg) translateY(-20px);}
+.two ul li:hover{background-color:#58add2;}
+.two ul li:hover a{color:#fff;text-shadow:0 0 10px #fff;}
+
+article h2{font-size:24px;color:#3d809b;line-height:52px;position:relative;}
+article h2:before{content:"";width:160px;height:1px;background-color:#4984a2;position:absolute;left:0;bottom:0;}
+article p{font-size:14px;color:#231411;line-height:32px;padding-top:32px;}
+footer p{font-size:12px;color:#040000;line-height:12px;height:12px;}
+footer span{color:#501a8c;font-size:12px;line-height:12px;height:12px;border-bottom:1px solid #501a8c;}
+footer h2{font-size:16px;color:#000609;line-height:24px;height:24px;}
+footer{height:186px;text-align:center;background-color:#4f9f9e;}
+</style>
+</head>
+<header>
+	<div class="inner">
+    	<div class="logo"><a href="#"><i class="fa fa-codepen"></i></a>codepen</div>
+    	<nav>menu</nav>
+    </div>
+</header>
+<section class="one">
+    	<div class="cloud"><i class="fa fa-cloud"></i></div>
+    	<h2>Hi, I'm <strong>Photon</strong>, another fine<br/>little freebie from <a href="#">HTML5 UP</a></h2>
+        <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br/>SSSlobortis feugiat sapien sed etiam volutpat accumsan.</p>
+        <div class="button"><a href="#">discover</a></div>
+</section>
+<section class="two">
+    	<div class="inner">
+    		<ul>
+        		<li><a href="#"><i class="fa fa-code"></i></a></li>
+        		<li><a href="#"><i class="fa fa-bolt"></i></a></li>
+        		<li><a href="#"><i class="fa fa-camera-retro"></i></a></li>
+        		<li><a href="#"><i class="fa fa-cog"></i></a></li>
+        		<li><a href="#"><i class="fa fa-desktop"></i></a></li>
+        		<li><a href="#"><i class="fa fa-calendar"></i></a></li>
+        	</ul>
+        	<article>
+            	<h2>Lorem ipsum dolor adipiscing<br/>amet dolor consequat</h2>
+            	<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+				<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
+				<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+            </article> 
+            <div class="clear"></div>
+     	</div>	          
+</section>   
+<footer>
+	<div class="inner"
+		<div class="icon"><i class="fa fa-"><i class="fa fa-"><i class="fa fa-"><i class="fa fa-"></div>
+    	<h2>© 我的自由时代</h2>
+    	<p>Design: <span>www.zynd.com</span></p>
+	</div>    
+</footer>
+
+<body>
+</body>
+</html>

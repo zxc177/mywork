@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,ul,li,dl,dd,p,input,textarea{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+img,input,textarea{border:none;}
+.inner{width:1140px;margin:0 auto; }
+.clear{clear:both;}
+body{font-family:arial,"微软雅黑","宋体";}
+header{height:83px;box-shadow:0 0 8px #d0d0d0;position:relative;z-index:2;}
+header .logo{float:left;padding-top:16px;}
+header ul li{float:left;text-transform:capitalize;font-size:15px;line-height:80px;height:83px;}
+header ul li a{color:#465248;padding:0 23px;display:block;}
+header ul li .active{border-top:3px solid #eb5846;background:url(../images/zbg_03.jpg);color:#e0620b;}
+header ul li .b{border-top:3px solid #fff;}
+header ul li a:hover{border-top:3px solid #eb5846;background:url(../images/zbg_03.jpg);color:#e0620b;}
+header ul{float:left;padding-left:152px;}
+header .icon{float:right;padding-top:29px;}
+header .icon a{width:23px;height:22px;display:block;float:left;padding-left:3px;}
+header .icon .o{background:url(../images/s-icons.png)  -242px -7px;}
+header .icon .t{background:url(../images/s-icons.png)  -268px -7px;}
+header .icon .th{background:url(../images/s-icons.png)  -294px -7px;}
+header .icon .fo{background:url(../images/s-icons.png)  -319px -7px;}
+header .icon .fi{background:url(../images/s-icons.png)  -344px -7px;}
+header .icon .si{background:url(../images/s-icons.png)  -370px -7px;}
+header .icon .o:hover{background:url(../images/s-icons.png)  -242px -46px;}
+header .icon .t:hover{background:url(../images/s-icons.png)  -268px -46px;}
+header .icon .th:hover{background:url(../images/s-icons.png)  -294px -46px;}
+header .icon .fo:hover{background:url(../images/s-icons.png)  -319px -46px;}
+header .icon .fi:hover{background:url(../images/s-icons.png)  -344px -46px;}
+header .icon .si:hover{background:url(../images/s-icons.png)  -370px -46px;}
+footer{background:#373737;height:325px;}
+
+footer .left{width:284px;float:left;padding-top:13px;}
+footer .last{width:270px;}
+footer .left h2{font-size:20px;color:#fbfbfb;line-height:49px;height:49px;background:url(../images/dsf_03.jpg) no-repeat left bottom;}
+footer .left p{font-size:12px;color:#9f9fab;line-height:23px;padding-top:17px;width:240px;}
+footer .left  .word a{padding:0 10px;display:block;float:left;font-size:12px;color:#a5a4a9;background:#222;height:37px;line-height:37px;margin-right:3px;margin-bottom:4px;}
+footer .left  .word {width:250px;margin-top:25px;}
+footer .mid p{font-size:12px;color:#9e9da2;line-height:21px;background:url(../images/tw.png) no-repeat left 23px;padding-left:31px;width:200px;}
+footer .mid p span{color:#f8f8f8;line-height:33px;font-weight:bold;}
+footer .mid p a{color:#d0d0d0;}
+footer .last .pic{margin-top:18px;}
+footer .last .pic a{margin:0 3px 3px 0;}
+.bottom {background:#232323;height:52px;}
+.bottom p{height:46px;line-height:46px;font-size:15px;padding-top:6px;float:right;}
+.bottom .logo{padding-top:15px;float:left;}
+.bottom p span{color:#e65b48;}
+.back{position:fixed;right:12px;bottom:12px;cursor:pointer;}

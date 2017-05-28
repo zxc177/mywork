@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dd,input,textarea{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+input,img{border:none;}
+.clear{clear:both;}
+body{background:#0f1427 url(images/body-bg.jpg) no-repeat center top;background-size:contain;font-family:arial,"微软雅黑","宋体";}
+.wrap{width:980px;margin:0 auto;}
+header {padding:34px 0  40px 0;}
+nav .menu{margin:10px 0 0 10px;display:none;}
+nav{height:40px;background:#888;border-radius:4px;box-shadow:0 5px 10px rgba(0,0,0,0.5);}
+nav ul{padding-left:27px;float:left;}
+nav ul li{float:left;padding-right:30px;}
+nav ul li a{font-size:14px;line-height:40px;color:#fff;height:40px;text-shadow:2px 3px 0 rgba(0,0,0,0.3);}
+nav form{float:right;color:#a4a9ad;padding:7px 10px 0 0;}
+nav form input{border-radius:4px;height:27px;width:140px;background:#fff;padding:0 10px;transition:all 1s;}
+section{margin-top:30px;}
+article{padding:0 35px 40px 35px;background:#fff;width:600px;float:left;border-radius:7px;}
+aside{width:240px;float:right;box-shadow:0 5px 10px rgba(0,0,0,0.5);}
+article h2{font-size:19px;height:21px;line-height:21px;color:#020001;padding-top:35px;}
+time{font-size:12px;height:41px;line-height:41px;color:#000100;}
+article p{font-size:12px;line-height:21px;color:#626864;padding-top:27px;width:524px;}
+article video{width:100%;margin-top:9px;}
+article audio{width:100%;}
+aside dl dd{font-size:12px;line-height:30px;color:#000005;border-top:1px solid #eee;}
+aside dl dt{font-size:15px;font-weight:bold;color:#030002;line-height:36px;height:36px;}
+aside dl{background:#fff;padding:0 20px;border-radius:7px;}
+aside .sidebar{padding-bottom:10px;margin-bottom:27px;}
+footer{font-size:12px;line-height:21px;color:#55665c;height:42px;text-align:center;padding:16px 0 29px;}
+

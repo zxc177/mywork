@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1280px){.thirteen .last .pic img{width:45%;}.thirteen .last{width:20%;}.thirteen .th-mid p{width:auto;}.thirteen .th-left p{width:auto;}}
+@media screen and (max-width:960px){header .icon .menu{display:inline-block;}header ul{display:none;}.three .box1{width:100%;float:none;}.three .box2{width:100%;float:none;}.two .pic{width:92%;padding-left:0;margin:0 auto;}.thirteen .last .pic img{width:70%;}.thirteen .th-mid p{height:auto;}.thirteen .th-left p{height:auto;}.four  p{width:auto;}}
+@media screen and (max-width:838px){.twlve p{height:auto;}}
+@media screen and (max-width:820px){.nine .p1{height:auto;}}
+@media screen and (max-width:768px){.two .pic{width:82%;}.four .text-left{width:70%;float:none;margin:0 auto;}.four .photo{width:70%;float:none;padding-left:0;margin:0 auto;}.four .text-right{width:70%;float:none;margin:0 auto;}.eight .picbox .box{width:45%;}.eight{margin:0 auto;}
+.thirteen .th-left{float:none;width:55%;padding-left:15%;}.thirteen .th-mid{float:none;width:55%;padding-left:15%;}.thirteen .last .pic{width:100%;}.thirteen .last .pic img{width:18%;}.thirteen .th-mid p{width:366px;line-height:15px;}.thirteen .date{line-height:13px;}.thirteen .th-left p{width:400px;}}
+@media screen and (max-width:480px){.two .pic{width:72%;}.four .text-left{width:60%;float:none;margin:0 auto;}.four .photo{width:60%;float:none;padding-left:0;margin:0 auto;}.four .text-right{width:60%;float:none;margin:0 auto;}.eight .picbox .box{width:90%;}.eight{margin:0 auto;}.thirteen .th-left{float:none;width:45%;padding-left:10%;}.thirteen .th-mid{float:none;width:45%;padding-left:10%;}.thirteen .last .pic{width:100%;}.thirteen .last .pic img{width:25%;}.thirteen .th-mid p{width:312px;line-height:22px;}.thirteen .date{line-height:15px;}.thirteen .th-left p{width:273px;}}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<canvas id="cvs" width="1000" height="1000" >您的浏览器不支持canvas</canvas>
+</body>
+</html>
+<script>
+        var cvs=document.getElementById("cvs");
+        var ctx=cvs.getContext("2d");
+        var ball=[];
+        function draw(){
+            ctx.clearRect(0,0,cvs.width,cvs.height);
+            drawballs();
+            update();
+        };
+        function init(){
+            for(var i=0;i<200;i++){
+                var r=Math.random()*20+10;//半径 10-30
+                cvs.width=document.documentElement.clientWidth;
+                cvs.height=document.documentElement.clientHeight;
+                var obj={
+                    x:Math.random()*cvs.width,
+                    y:Math.random()*cvs.height,
+                    r:r,
+                    max:r+Math.random()*10+10,
+                    min:r-Math.random()*10,
+                    color:"rgba("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+",0.8)"
+                };
+                ball.push(obj);
+            }
+        };
+        function  drawballs(){
+            for(var i=0;i<ball.length;i++){
+                ctx.strokeStyle=ball[i].color;
+                ctx.beginPath();
+                ctx.arc( ball[i].x,ball[i].y,ball[i].r,0,Math.PI*2 );
+                ctx.closePath();
+                ctx.stroke();
+            };
+
+        }
+        function update(){
+            //泡泡变大变小
+            for(var i=0;i<ball.length;i++){
+                var balls=ball[i];
+                if(balls.onoff){
+                    balls.r--;
+                    if(balls.r<=balls.min)
+                        balls.onoff=false;
+                }else{
+                    balls.r++;
+                    if(balls.r>=balls.max)
+                        balls.onoff=true;
+                };
+                //循环产生 泡泡
+                balls.y-=2;
+                if(balls.y<0){
+                    balls.y=cvs.height;//设定值从最底层冒出
+                }
+
+            }
+        };
+        init();
+        var timer= setInterval(draw,100);
+
+</script>

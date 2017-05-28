@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+    *{margin:0;padding:0}
+    svg{display: block;background:lightcyan;}
+
+</style>
+<script src="js/jquery-3.1.0.js"></script>
+<script>
+$(function(){
+    //绘制圆盘
+    var $svg=$("svg");
+    var dom= document.createElementNS("http://www.w3.org/2000/svg","circle");
+   $(dom).attr({ fill:"none",stroke:"yellowgreen",cx:500,cy:500,r:400,"stroke-width":10 }).appendTo($svg);
+    //绘制60个刻度
+    for(var i=0;i<60;i++){
+        var deg=Math.PI*2/60*i-Math.PI*2/4;// 定位角度
+        dom= document.createElementNS("http://www.w3.org/2000/svg","circle");
+        $(dom).attr({fill:"none",stroke:"yellowgreen","stroke-width":10,
+            cx:500+380*Math.cos(deg),cy:500+380*Math.sin(deg),
+            r:i%5==0? 10:5
+        }).appendTo($svg);
+    };
+    //s针
+    var s= document.createElementNS("http://www.w3.org/2000/svg","line");
+    $(s).attr({ fill:"none",stroke:"#58add2","x1":"500","y1":"500",
+        "x2":500+360*Math.cos(deg),"y2":500+360*Math.sin(deg),
+        "stroke-width":3,"stroke-linecap":"round"}).appendTo($svg);
+    //m针
+    deg=Math.PI*2/12-Math.PI*2/4;//初始化位置
+    var m= document.createElementNS("http://www.w3.org/2000/svg","line");
+    $(m).attr({ fill:"none",stroke:"#fcc800","x1":"500","y1":"500",
+        "x2":500+280*Math.cos(deg),"y2":500+280*Math.sin(deg),
+        "stroke-width":6,"stroke-linecap":"round"}).appendTo($svg);
+    //h针
+    deg=Math.PI*2/12*10-Math.PI*2/4;//初始化位置
+    var  h= document.createElementNS("http://www.w3.org/2000/svg","line");
+    $(h).attr({ fill:"none",stroke:"#FB7D28","x1":"500","y1":"500",
+        "x2":500+220*Math.cos(deg),"y2":500+220*Math.sin(deg),
+        "stroke-width":10,"stroke-linecap":"round"}).appendTo($svg);
+    //圆点
+   dom= document.createElementNS("http://www.w3.org/2000/svg","circle");
+    $(dom).attr({ fill:"#fff",stroke:"yellowgreen",cx:500,cy:500,r:10,"stroke-width":10 }).appendTo($svg);
+    //move 改变 定位坐标的值
+    function  move(){
+        var time=new Date();
+        var deg=Math.PI*2/60*time.getSeconds()-Math.PI*2/4;// 定位角度
+        $(s).attr({ x2:500+360*Math.cos(deg),y2:500+360*Math.sin(deg)});
+
+        deg=Math.PI*2/60*time.getMinutes()-Math.PI*2/4;// 定位角度
+        $(m).attr({ x2:500+280*Math.cos(deg),y2:500+280*Math.sin(deg)});
+
+        deg=Math.PI*2/12*time.getHours()-Math.PI*2/4;// 定位角度
+        $(h).attr({ x2:500+220*Math.cos(deg),y2:500+220*Math.sin(deg)});
+
+    };
+    setInterval(move,1000);
+});
+</script>
+</head>
+<body>
+<svg  height="1000" version="1.1" width="1000" >
+<!--
+    <circle   fill="none" stroke="rebeccapurple"  cx="500" cy="500" r="400" ></circle>
+    <line   fill="none" stroke="red"  x1="500" y1="500"  x2="500" y2="100"></line>
+-->
+</svg>
+</body>
+</html>

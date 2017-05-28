@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0}
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+
+</head>
+<body>
+<canvas id="cvs" width="1000" height="1000" style="background:lightcyan;margin-left:100px;">canvas</canvas>
+
+</body>
+</html>
+<script>
+    var cvs=document.getElementById("cvs");
+    var ctx=cvs.getContext("2d");
+    var lastX,lastY;
+    var onoff=false;
+    ctx.lineWidth=10;
+    ctx.lineCap="round";
+    cvs.onmousedown=function(event){
+      if(event.button==0){
+            onoff=true;
+            lastX=undefined;
+            lastY=undefined;//重置为空
+       };
+
+    };
+    cvs.onmouseup=function(){
+        onoff=false;
+    };
+
+    cvs.onmousemove=function clip(event){
+        paint(event.offsetX,event.offsetY);
+    };
+    function paint(x,y){
+
+        if(!onoff){
+           return;//如果为假返回
+        };
+        if(lastX) {
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.closePath();
+            ctx.strokeStyle = "rebeccapurple";
+            ctx.stroke();
+        };
+        lastX=x;
+        lastY=y;//重新赋值改变lastxy
+
+
+    };
+
+/*
+    var i,last;
+    cvs.onclick=function(){
+        var now=new Date();
+        if(last!=undefined){
+            var d=now-last;
+            i++;
+            console.log("timedelta",d)
+        };
+        last=now;
+    };
+
+*/
+    var i,last;
+    cvs.onclick=function(){
+        var now=new Date();
+        var d=now-last;
+        i++;
+        console.log("timedelta",d)
+        last=now;
+
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

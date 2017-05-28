@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background: lightblue}
+        .bigpic{width:980px;height:500px;}
+        .center{position:absolute;margin:auto;left:0;top:0;bottom:0;right:0;}
+        .item{width:196px;height:100px;position: absolute;background: #58add2;}
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            init();// 加入25个div 点击该图切换大小图
+            showpic(0);//显示每个大图
+            showallpic();//显示所有小图
+        });
+        function init(){
+            for(var i=0;i<25;i++){
+                var l=i%5*196;
+                var t=parseInt(i/5)*100;
+                $("<div class='item'></div>").css({left:l+"px",top:t+"px"}).appendTo(".bigpic")
+            };
+            var state=true;
+            $(".item").click(function(){
+                state ?  showpic( $(this).index() ): showallpic();
+                state=!state;
+                //hide();
+               // hidefn(0);
+            });
+        };
+        function showallpic(){
+            $(".item").each(function(i){
+                $(this).animate({opacity:0.1},Math.random()*2700+300,function(){
+                    $(this).css({backgroundImage:"url(images/"+i+".jpg)"}).css({backgroundSize:"cover"})
+                })
+                .animate({opacity:1},1000)
+            });
+
+        };
+        function showpic(j){
+            $(".item").each(function(i){
+                $(this).animate({opacity:0.1},Math.random()*2700+300,function(){
+                    var l=i%5;
+                    var t=parseInt(i/5);
+                    $(this).css({backgroundImage:"url(images/"+j+".jpg)",backgroundSize:"auto",backgroundPosition:l*25+"%" + t*25+"%" });
+                }) .animate({opacity:1},"slow");
+            })
+        };
+        // delay 写法消失 比递归法好
+        function  hide(){
+            $(".item").each(function(i){
+                $(this).delay(500*i).animate({opacity:0.1},500,"linear");
+            });
+        };
+        // 递归写法消失
+        function  hidefn(n){
+            $(".item").eq(n).animate({opacity:0.1},500,"linear",function(){
+                if(n>=24){return};
+                hidefn(n+1);
+            });
+        };
+    </script>
+
+</head>
+<body>
+
+<div class="bigpic center">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript" language="javascript">
+        var exitUrl = 'http://m2151.looyu.com:80/monitor/s?c=l&i=52522&v=34e112c2aff34c46ef48843ac7e92079cc&p=undefined&_t=1492242662205'
+
+        var xmlHttp = null;
+
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            if (window.ActiveXObject) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        function viewer_leave() {
+            xmlHttp.open("GET", exitUrl, false);
+            xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+            xmlHttp.send();
+        }
+
+    </script>
+</head>
+<body onunload="viewer_leave()">
+</body>
+</html>

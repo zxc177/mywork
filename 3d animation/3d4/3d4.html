@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{background: lightblue}
+        .bigpic{width:1200px;height:500px;}
+        .center{position:absolute;margin:auto;left:0;top:0;bottom:0;right:0;}
+        .item{position: absolute;}
+    </style>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            init();
+        });
+        function init(){
+            var rows=40;//行
+            var cols=40;//列
+            var $bigpic=$(".bigpic");
+            var w=$bigpic.width()/cols;//宽度
+            var h=$bigpic.height()/rows;//高度
+
+            for(var r=0;r<rows;r++){//行 行列变换切换不同顺序
+                for(var c=0;c<cols;c++){//列
+                    if(Math.random()<0.02)continue;
+                    var rx=( Math.random()*1000+1000 )*( Math.random()>0.5 ?  -1:1);// +-1000数字
+                    var ry=( Math.random()*1000+1000 )*( Math.random()>0.5 ?  -1:1);// +-1000数字
+                    var rt=Math.random()*2+1;// 1-3s
+                    var rd=Math.random()*2+1;
+                    $("<div class='item'></div>").css({
+                        width:w,height:h,
+                        left:c*w+"px",top:r*h+"px",
+                        backgroundImage:"url(img/6.jpg)",
+                        backgroundPosition:c*100/(cols-1)+"%"+r*100/(rows-1)+"%",
+                        transform:"translate("+rx+"px,"+ry+"px)",
+                        transition: "transform "+rt+"s "+rd+"s"
+                    }).appendTo($bigpic);
+                }
+            };
+            $("body").click(function(){
+                $(".item").css({transform:"translate(0,0)"});
+            });
+        };
+    </script>
+
+</head>
+<body>
+
+<div class="bigpic center">
+
+</div>
+
+</body>
+</html>
